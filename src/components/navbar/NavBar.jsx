@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { CiShoppingCart } from "react-icons/ci";
+import { FaRegHeart } from 'react-icons/fa';
+import { getAllCart, getAllWish } from '../utilities';
+
 
 const NavBar = () => {
+    const [product, setProduct] = useState([])
+    const [wishList, setWishList] = useState([])
+
+
+    useEffect(()=>{
+        const cart = getAllCart()
+        setProduct(cart)
+        const wish = getAllWish()
+        setWishList(wish)
+    },[])
+
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-purple-500 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,36 +38,75 @@ const NavBar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+
+                        <NavLink
+                            to="/"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            <li><a>Home</a></li>
+                        </NavLink>
+                        <NavLink
+                            to="/statistics"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            <li><a>Statistics</a></li>
+                        </NavLink>
+                        <NavLink
+                            to="/dashboard"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            <li><a>Dashboard</a></li>
+                        </NavLink>
+
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="font-bold text-2xl">Gadget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    <NavLink
+                        to="/"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        <li><a>Home</a></li>
+                    </NavLink>
+                    <NavLink
+                        to="/statistics"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        <li><a>Statistics</a></li>
+                    </NavLink>
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        <li><a>Dashboard</a></li>
+                    </NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <CiShoppingCart />
+                <button className="">
+                    {/* <FaRegHeart className='ml-4'></FaRegHeart> */}
+                    <div className="mb-4">{product.length}</div>
+                </button>
+                <FaRegHeart className='ml-4'></FaRegHeart>
+                <button className="">
+                    {/* <FaRegHeart className='ml-4'></FaRegHeart> */}
+                    <div className="mb-4">{wishList.length}</div>
+                </button>
             </div>
         </div>
     );

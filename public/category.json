@@ -1,0 +1,33 @@
+[
+    {
+        "status": true,
+        "message": "successfully fetched all the categories data",
+        "categories": [
+          {
+            "id": 1,
+            "category": "Smartphone"
+          },
+          {
+            "id": 2,
+            "category": "Laptop"
+          },
+          {
+            "id": 3,
+            "category": "Tablet"
+          },
+          {
+            "id": 4,
+            "category": "Smartwatch"
+          },
+          {
+            "id": 5,
+            "category": "Headphones"
+          },
+          {
+            "id": 6,
+            "category": "Camera"
+          }
+        ]
+      }
+      
+]

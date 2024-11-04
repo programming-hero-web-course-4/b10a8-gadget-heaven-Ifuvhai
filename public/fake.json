@@ -1,0 +1,155 @@
+[
+    {
+        "product_id": "P002",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://example.com/galaxys23ultra.jpg",
+        "category": "Smartphone",
+        "price": 1199,
+        "description": "High-performance smartphone with an amazing camera and sleek design.",
+        "specification": [
+            "6.8-inch QHD+ Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2 processor",
+            "Quad-camera system (200MP Main, 12MP Ultra-Wide, 10MP Telephoto, 10MP Periscope)",
+            "8K video recording",
+            "5000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Apple iPad Pro 12.9",
+        "product_image": "https://example.com/ipadpro129.jpg",
+        "category": "Tablet",
+        "price": 1099,
+        "description": "The ultimate tablet with M2 chip and Liquid Retina XDR display.",
+        "specification": [
+            "12.9-inch Liquid Retina XDR display",
+            "Apple M2 chip",
+            "LiDAR Scanner",
+            "Face ID",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P004",
+        "product_title": "Sony WH-1000XM5 Headphones",
+        "product_image": "https://example.com/sonywh1000xm5.jpg",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Industry-leading noise cancellation and exceptional sound quality.",
+        "specification": [
+            "Over-ear design",
+            "Active noise cancellation",
+            "30 hours battery life",
+            "Quick charge (10 min for 5 hours)",
+            "Touch control"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Dell XPS 13 Plus",
+        "product_image": "https://example.com/dellxps13plus.jpg",
+        "category": "Laptop",
+        "price": 1299,
+        "description": "Ultra-thin laptop with a beautiful display and powerful performance.",
+        "specification": [
+            "13.4-inch FHD+ display",
+            "12th Gen Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel Iris Xe graphics"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Amazon Kindle Paperwhite",
+        "product_image": "https://example.com/kindlepaperwhite.jpg",
+        "category": "Tablet",
+        "price": 139,
+        "description": "Waterproof e-reader with a glare-free display, ideal for reading anywhere.",
+        "specification": [
+            "6.8-inch glare-free display",
+            "Waterproof (IPX8)",
+            "Adjustable warm light",
+            "Up to 10 weeks of battery life",
+            "8GB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "https://example.com/galaxywatch6.jpg",
+        "category": "Smartwatch",
+        "price": 299,
+        "description": "Smartwatch with advanced health tracking and sleek design.",
+        "specification": [
+            "1.5-inch Super AMOLED display",
+            "Heart rate monitor",
+            "ECG sensor",
+            "GPS",
+            "Water resistance up to 50 meters"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P008",
+        "product_title": "Bose SoundLink Revolve+ II",
+        "product_image": "https://example.com/bosesoundlinkrevolveplus2.jpg",
+        "category": "Smartwatch",
+        "price": 329,
+        "description": "Portable Bluetooth speaker with 360° sound and long battery life.",
+        "specification": [
+            "360° sound",
+            "Battery life up to 17 hours",
+            "Water-resistant (IP55)",
+            "Bluetooth 4.1",
+            "Built-in microphone for calls"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P009",
+        "product_title": "GoPro HERO11 Black",
+        "product_image": "https://example.com/goprohero11.jpg",
+        "category": "Camera",
+        "price": 499,
+        "description": "Waterproof action camera with 5.3K video and advanced stabilization.",
+        "specification": [
+            "5.3K60 video",
+            "23MP photos",
+            "Waterproof up to 33ft",
+            "HyperSmooth 4.0",
+            "Live streaming capabilities"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Dyson Airwrap Complete Styler",
+        "product_image": "https://example.com/dysonairwrap.jpg",
+        "category": "Tablet",
+        "price": 599,
+        "description": "Advanced styling tool with Coanda effect for smooth, voluminous hair.",
+        "specification": [
+            "Coanda air styling",
+            "Multiple attachments",
+            "Temperature control",
+            "Negative ion technology",
+            "Cord length 2.68m"
+        ],
+        "availability": true,
+        "rating": 4.6
+    }
+]

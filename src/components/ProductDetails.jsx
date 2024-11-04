@@ -1,11 +1,22 @@
 import React from 'react';
-import NavBar from '../navbar/NavBar';
-import Footer from '../footer/Footer';
+import { CiShoppingCart } from 'react-icons/ci';
+import { FaRegHeart } from 'react-icons/fa';
+import { useLoaderData, useParams } from 'react-router-dom';
+import { addToCart, addToWish } from './utilities';
 
-const Statistics = () => {
+
+const ProductDetails = () => {
+
+    const data = useLoaderData()
+    const {id} = useParams()
+    const product = data.find(product => product.product_id === id);
+    console.log(product)
+
+    const handleCart =(product)=>{
+        addToCart(product);
+    }
     return (
         <div>
-            <NavBar></NavBar>
             <div className="hero bg-purple-700 text-white">
                 <div className="hero-content text-center pb-40">
                     <div className="max-w-md">
@@ -24,27 +35,26 @@ const Statistics = () => {
                         src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
                         className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 className="text-2xl font-bold">Box Office News!</h1>
-                        <p>Price: $999</p>
+                        <h1 className="text-2xl font-bold">{product.product_title}</h1>
+                        <p>Price: $ {product.price}</p>
                         <button className='btn btn-info bg-green-200 rounded-full'>In Stock</button>
                         <p>
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            {product.description}
                         </p>
                         <h2>Specification:</h2>
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
-                        <p>4</p>
+                        {
+                            product.specification.map(quote => <li> { quote}</li>)
+                        }
+                        
 
-                        <h2>Rating</h2>
-                        <button className="btn btn-primary">Add To Cart</button>
+                        <h2>Rating: {product.rating}</h2>
+                        <button onClick={()=> addToCart(product)} className="btn btn-primary rounded-full">Add To Cart <CiShoppingCart></CiShoppingCart></button>
+                        <button onClick={()=> addToWish(product)} className='ml-4'><FaRegHeart></FaRegHeart></button>
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
 
-export default Statistics;
+export default ProductDetails;
