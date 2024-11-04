@@ -1,11 +1,12 @@
 import React from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 
-const WishList = ({wish}) => {
+const WishList = ({wish, handleWishRemove}) => {
     return (
         <div className=' max-w-screen-lg mx-auto'>
             
 
-            <div className=' border p-4'>
+            <div className='flex border p-4 justify-between items-center'>
                 <div className='flex gap-5'>
                     <img src="" alt="" />
                     <div>
@@ -14,7 +15,7 @@ const WishList = ({wish}) => {
                         <p>Price: {wish.price}</p>
                     </div>
                 </div>
-                <button className='btn btn-primary rounded-full'>Add To Cart</button>
+                <div onClick={() => handleWishRemove(wish.product_id)}><FaTrashAlt></FaTrashAlt></div>
             </div>
         </div>
     );

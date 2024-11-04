@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { FaRegHeart } from 'react-icons/fa';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { addToCart, addToWish } from './utilities';
+import { addToCart, addToWish, getAllWish } from './utilities';
 
 
 const ProductDetails = () => {
+    const [isWish, setIsWish] = useState(false);
+
+    useEffect(()=>{
+        const wish = getAllWish()
+        const isExist = wish.find(item => item.product_id ===product.product_id)
+        if(isExist){
+            setIsWish(true)
+        }
+    },[])
 
     const data = useLoaderData()
     const {id} = useParams()
@@ -14,6 +23,7 @@ const ProductDetails = () => {
 
     const handleCart =(product)=>{
         addToCart(product);
+        setIsWish(true)
     }
     return (
         <div>
@@ -49,7 +59,7 @@ const ProductDetails = () => {
 
                         <h2>Rating: {product.rating}</h2>
                         <button onClick={()=> addToCart(product)} className="btn btn-primary rounded-full">Add To Cart <CiShoppingCart></CiShoppingCart></button>
-                        <button onClick={()=> addToWish(product)} className='ml-4'><FaRegHeart></FaRegHeart></button>
+                        <button disabled={isWish} onClick={()=> addToWish(product)} className='ml-4'><FaRegHeart></FaRegHeart></button>
                     </div>
                 </div>
             </div>

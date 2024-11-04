@@ -34,7 +34,7 @@ import toast from "react-hot-toast";
     toast.success('Added Successfully!')
 }
  const addToWish = (product)=>{
-    const wish = getAllCart();
+    const wish = getAllWish();
     const isExist = wish.find(item => item.product_id ===product.product_id)
     if(isExist){
         return toast.error('Already Exist')
@@ -52,7 +52,7 @@ const removeCart = (id)=>{
     toast.success('Remove Successfully!')
 }
 const removeWish = (id)=>{
-    const items = getAllCart();
+    const items = getAllWish();
     const remaining = items.filter(item=> item.product_id !== id)
     localStorage.setItem('wish', JSON.stringify(remaining))
     toast.success('Remove Successfully!')

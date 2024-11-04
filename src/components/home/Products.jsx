@@ -26,7 +26,7 @@ const Products = ({data}) => {
                 show all products here
             </h2>
 
-            <div className='flex gap-4'>
+            <div className='md:flex gap-4'>
                 <div>
                     {
                         data.map(category => <Categories category={category} handleCategory={handleCategory} key={category.id}></Categories>)
@@ -43,7 +43,7 @@ const Products = ({data}) => {
                     }
                 </div> */}
 
-<div className='grid grid-cols-3 gap-4'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
     { (productCategory?.length || allProduct?.length) ? 
         (productCategory || allProduct).map(product => (
             <ProductCards product={product} key={product.product_id} />
