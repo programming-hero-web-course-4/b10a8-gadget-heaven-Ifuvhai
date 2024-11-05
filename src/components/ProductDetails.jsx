@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { FaRegHeart } from 'react-icons/fa';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useLocation, useParams } from 'react-router-dom';
 import { addToCart, addToWish, getAllWish } from './utilities';
 
 
 const ProductDetails = () => {
+    const {pathname} = useLocation()
     const [isWish, setIsWish] = useState(false);
 
     useEffect(()=>{
@@ -42,24 +43,26 @@ const ProductDetails = () => {
             <div className="hero bg-base-200 max-w-screen-md mx-auto -mt-44 mb-10 rounded-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                        src={product.product_image}
                         className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-2xl font-bold">{product.product_title}</h1>
-                        <p>Price: $ {product.price}</p>
-                        <button className='btn btn-info bg-green-200 rounded-full'>In Stock</button>
+                        <p className='text-lg font-bold py-1'>Price: $ {product.price}</p>
+                        <button className='btn btn-info bg-green-200 rounded-full'>{
+                            product.availability? 'In Stock': 'Out of Stock'
+                            }</button>
                         <p>
                             {product.description}
                         </p>
-                        <h2>Specification:</h2>
+                        <h2 className='text-lg font-bold py-1'>Specification:</h2>
                         {
-                            product.specification.map(quote => <li> { quote}</li>)
+                            product.specification.map(quote => <li className='font-medium'> { quote}</li>)
                         }
                         
 
-                        <h2>Rating: {product.rating}</h2>
-                        <button onClick={()=> addToCart(product)} className="btn btn-primary rounded-full">Add To Cart <CiShoppingCart></CiShoppingCart></button>
-                        <button disabled={isWish} onClick={()=> addToWish(product)} className='ml-4'><FaRegHeart></FaRegHeart></button>
+                        <h2 className='text-lg font-bold'>Rating: {product.rating}</h2>
+                        <button onClick={()=> addToCart(product)} className="btn btn-primary rounded-full bg-purple-500 border-none text-white font-bold">Add To Cart <CiShoppingCart></CiShoppingCart></button>
+                        <button disabled={isWish} onClick={()=> addToWish(product)} className='ml-4 '><FaRegHeart></FaRegHeart></button>
                     </div>
                 </div>
             </div>

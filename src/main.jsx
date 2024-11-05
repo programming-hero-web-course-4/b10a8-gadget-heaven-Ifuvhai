@@ -1,8 +1,8 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Statistics from './components/statistics/Statistics.jsx';
 import Dashboard from './components/dashboard/Dashboard.jsx';
 import Home from './components/home/Home.jsx';
@@ -20,12 +20,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/public/category.json')
+        loader: ()=> fetch('/category.json')
       },
       {
         path: "/product_details/:id",
         element: <ProductDetails></ProductDetails>,
-        loader: () => fetch('/public/fake.json')
+        loader: () => fetch('/fake.json')
       }
       
     ],

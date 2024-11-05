@@ -2,7 +2,7 @@
     {
         "product_id": "P002",
         "product_title": "Samsung Galaxy S23 Ultra",
-        "product_image": "https://example.com/galaxys23ultra.jpg",
+        "product_image": "https://i.ibb.co.com/qsqnwGt/samsung-galaxy-s23-ultra-5g.jpg",
         "category": "Smartphone",
         "price": 1199,
         "description": "High-performance smartphone with an amazing camera and sleek design.",
@@ -19,7 +19,7 @@
     {
         "product_id": "P003",
         "product_title": "Apple iPad Pro 12.9",
-        "product_image": "https://example.com/ipadpro129.jpg",
+        "product_image": "https://i.ibb.co.com/wJB3PRQ/Apple-i-Pad-Pro-12-9-6th-generation-17.webp",
         "category": "Tablet",
         "price": 1099,
         "description": "The ultimate tablet with M2 chip and Liquid Retina XDR display.",
@@ -36,7 +36,7 @@
     {
         "product_id": "P004",
         "product_title": "Sony WH-1000XM5 Headphones",
-        "product_image": "https://example.com/sonywh1000xm5.jpg",
+        "product_image": "https://i.ibb.co.com/vB6Fcvw/images-3.jpg",
         "category": "Headphones",
         "price": 399,
         "description": "Industry-leading noise cancellation and exceptional sound quality.",
@@ -53,7 +53,7 @@
     {
         "product_id": "P005",
         "product_title": "Dell XPS 13 Plus",
-        "product_image": "https://example.com/dellxps13plus.jpg",
+        "product_image": "https://i.ibb.co.com/10R57Hs/16851861041203147355.webp",
         "category": "Laptop",
         "price": 1299,
         "description": "Ultra-thin laptop with a beautiful display and powerful performance.",
@@ -70,7 +70,7 @@
     {
         "product_id": "P006",
         "product_title": "Amazon Kindle Paperwhite",
-        "product_image": "https://example.com/kindlepaperwhite.jpg",
+        "product_image": "https://i.ibb.co.com/sRVjf1n/images-4.jpg",
         "category": "Tablet",
         "price": 139,
         "description": "Waterproof e-reader with a glare-free display, ideal for reading anywhere.",
@@ -87,7 +87,7 @@
     {
         "product_id": "P007",
         "product_title": "Samsung Galaxy Watch 6",
-        "product_image": "https://example.com/galaxywatch6.jpg",
+        "product_image": "https://i.ibb.co.com/6WPc1F4/samsung-galaxy-watch-6-classic-exercise.jpg",
         "category": "Smartwatch",
         "price": 299,
         "description": "Smartwatch with advanced health tracking and sleek design.",
@@ -104,7 +104,7 @@
     {
         "product_id": "P008",
         "product_title": "Bose SoundLink Revolve+ II",
-        "product_image": "https://example.com/bosesoundlinkrevolveplus2.jpg",
+        "product_image": "https://i.ibb.co.com/KsQ37b7/236731-Samsung-Galaxy-Watch-6-OGrove-0017.jpg",
         "category": "Smartwatch",
         "price": 329,
         "description": "Portable Bluetooth speaker with 360° sound and long battery life.",
@@ -121,7 +121,7 @@
     {
         "product_id": "P009",
         "product_title": "GoPro HERO11 Black",
-        "product_image": "https://example.com/goprohero11.jpg",
+        "product_image": "https://i.ibb.co.com/D90SVxQ/04-Dual-LCD-screens-680x450-v2.jpg",
         "category": "Camera",
         "price": 499,
         "description": "Waterproof action camera with 5.3K video and advanced stabilization.",
@@ -138,7 +138,7 @@
     {
         "product_id": "P010",
         "product_title": "Dyson Airwrap Complete Styler",
-        "product_image": "https://example.com/dysonairwrap.jpg",
+        "product_image": "https://i.ibb.co.com/4mjfHvT/ipad-10-apple.webp",
         "category": "Tablet",
         "price": 599,
         "description": "Advanced styling tool with Coanda effect for smooth, voluminous hair.",

@@ -7,7 +7,7 @@ const Products = ({ data }) => {
     const [productCategory, setProductCategory] = useState([])
 
     useEffect(() => {
-        fetch('/public/fake.json')
+        fetch('/fake.json')
             .then(res => res.json())
             .then(data => {
                 setAllProduct(data)
@@ -19,10 +19,11 @@ const Products = ({ data }) => {
         const categoryProduct = allProduct.filter(product => product.category === categoryName)
         setProductCategory(categoryProduct)
     };
-    // console.log(productCategory)
+
+    
 
     return (
-        <div className='max-w-screen-lg mx-auto'>
+        <div className='max-w-screen-lg mx-auto mb-10'>
             <h2 className='text-center text-3xl font-bold mb-10'>
                 Explore Cutting-Edge Gadgets
             </h2>
@@ -34,22 +35,13 @@ const Products = ({ data }) => {
                     }
                 </div>
 
-                {/* <div className='grid grid-cols-3 gap-4'>
-                    {
-                        productCategory? 
-                            productCategory.map(product => <ProductCards product={product} key={product.product_id}></ProductCards>)
-                         : 
-                            allProduct.map(product => <ProductCards product={product} key={product.product_id}></ProductCards>)
-                        
-                    }
-                </div> */}
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {(productCategory?.length || allProduct?.length) ?
                         (productCategory || allProduct).map(product => (
                             <ProductCards product={product} key={product.product_id} />
                         )) :
-                        <p>No products available.</p>
+                        <p className='text-4xl font-bold'>No products available.</p>
                     }
                 </div>
 

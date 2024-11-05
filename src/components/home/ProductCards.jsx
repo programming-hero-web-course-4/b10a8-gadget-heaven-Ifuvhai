@@ -2,21 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCards = ({ product }) => {
-    console.log(product)
+    // console.log(product)
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+            <div className="card border lg:h-[450px] bg-base-100 shadow-xl">
+                <figure className="p-2">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes"
-                        className="rounded-xl" />
+                        src={product.product_image}
+                        alt="gadget"
+                        className="rounded-xl h-48" />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">{product.product_title}</h2>
-                    <p>Price: {product.price}</p>
+                    <h2 className="card-title font-bold">{product.product_title}</h2>
+                    <p className='text-lg font-medium'>Price: {product.price}</p>
                     <div className="card-actions">
-                        <Link to={`/product_details/${product.product_id}`}><button className="btn btn-outline rounded-full">View Details</button></Link>
+                        <Link to={`/product_details/${product.product_id}`}><button className="btn btn-outline rounded-full text-purple-500 border-purple-400">View Details</button></Link>
                     </div>
                 </div>
             </div>

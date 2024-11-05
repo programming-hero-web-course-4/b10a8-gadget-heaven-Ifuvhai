@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { CiShoppingCart } from "react-icons/ci";
 import { FaRegHeart } from 'react-icons/fa';
 import { getAllCart, getAllWish } from '../utilities';
 
 
 const NavBar = () => {
+    const {pathname}=useLocation()
     const [product, setProduct] = useState([])
     const [wishList, setWishList] = useState([])
-
+console.log(pathname)
 
     useEffect(()=>{
         const cart = getAllCart()
@@ -18,7 +19,7 @@ const NavBar = () => {
     },[])
 
     return (
-        <div className="navbar bg-purple-500 text-white">
+        <div className={` navbar ${pathname === '/dashboard'? 'bg-slate-400': 'bg-purple-500'}  text-white `}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +43,7 @@ const NavBar = () => {
                         <NavLink
                             to="/"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
+                                isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                             }
                         >
                             <li><a>Home</a></li>
@@ -50,7 +51,7 @@ const NavBar = () => {
                         <NavLink
                             to="/statistics"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
+                                isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                             }
                         >
                             <li><a>Statistics</a></li>
@@ -58,7 +59,7 @@ const NavBar = () => {
                         <NavLink
                             to="/dashboard"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
+                                isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                             }
                         >
                             <li><a>Dashboard</a></li>
@@ -73,7 +74,7 @@ const NavBar = () => {
                     <NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
+                            isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                         }
                     >
                         <li><a>Home</a></li>
@@ -81,7 +82,7 @@ const NavBar = () => {
                     <NavLink
                         to="/statistics"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
+                            isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                         }
                     >
                         <li><a>Statistics</a></li>
@@ -89,7 +90,7 @@ const NavBar = () => {
                     <NavLink
                         to="/dashboard"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
+                            isPending ? "pending" : isActive ? "bg-sky-400 rounded-lg" : ""
                         }
                     >
                         <li><a>Dashboard</a></li>

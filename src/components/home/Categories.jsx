@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Categories = ({category, handleCategory}) => {
     // console.log(category)

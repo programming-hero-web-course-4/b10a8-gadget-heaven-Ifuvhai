@@ -5,8 +5,11 @@ import { getAllCart, getAllWish, removeCart, removeWish } from '../utilities';
 import CartCard from './CartCard';
 import WishList from './WishList';
 import { useNavigate } from 'react-router-dom';
+import { RiEqualizerLine } from 'react-icons/ri';
 
 const Dashboard = () => {
+    
+
     const [product, setProduct] = useState([]);
     const [wishList, setWishList] = useState([])
     const [totalCost, setTotalCost] = useState([])
@@ -92,16 +95,17 @@ const Dashboard = () => {
             </div>
 
             <div className='flex justify-between max-w-screen-lg mx-auto'>
-                <h2>{activeTab === "Cart" ? "Cart" : "Wish List"}</h2>
+                <h2 className='text-xl font-bold my-4'>{activeTab === "Cart" ? "Cart" : "Wish List"}</h2>
                 {activeTab === "Cart" && (
-                    <div className="flex gap-4">
-                        <h2>Total Cost: ${calculateTotalCost()}</h2>
-                        <button onClick={handleSort} className="btn btn-outline rounded-full">
+                    <div className="flex items-center gap-4 my-4">
+                        <h2 className='text-lg font-bold'>Total Cost: ${calculateTotalCost()}</h2>
+                        <button onClick={handleSort} className="btn btn-outline rounded-full text-purp">
                             Sort By Price
+                            <span><RiEqualizerLine></RiEqualizerLine></span>
                         </button>
                         <button onClick={handlePurchase}
                             disabled={!product.length}
-                            className="btn btn-outline rounded-full">Purchase</button>
+                            className="btn btn-outline rounded-full bg-purple-500 text-white">Purchase</button>
                     </div>
                 )}
             </div>
@@ -113,7 +117,7 @@ const Dashboard = () => {
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box text-center">
                     <div className='flex justify-center'>
-                    <img className='' src="/src/assets/Group.png" alt="" />
+                    <img className='' src="https://i.ibb.co.com/2P6ZQtP/Group.png" alt="" />
                     </div>
                     <h3 className="font-bold text-3xl">Payment Successfully!</h3>
                     <p className="py-4">Thanks for purchasing!</p>

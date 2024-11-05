@@ -1,10 +1,11 @@
-# Gadget Haven
+## Gadget Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+Gadget Heaven is a web application where users can browse, view, and purchase various gadgets. It includes features such as product listings, detailed product views, cart management, and a checkout process.
 
-# Live Link: 
 
-# Requirement Document: (file:///C:/Users/RC/Projects/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf)
+# Live Link: (https://stalwart-toffee-cf99c0.netlify.app/)
+
 
 # React Concept: 
 

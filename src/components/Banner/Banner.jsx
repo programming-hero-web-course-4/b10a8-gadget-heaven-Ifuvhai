@@ -10,11 +10,11 @@ const Banner = () => {
                         <p className="py-6 max-w-xl mx-auto">
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                         </p>
-                        <button className="btn btn-primary font-bold bg-white text-black border-none">Shop Now</button>
+                        <button className="btn btn-primary font-bold bg-white text-purple-500 border-none">Shop Now</button>
                     </div>
                 </div>
             <div className='p-4 border border-white w-1/2 mx-auto rounded-lg -mb-[500px]'>
-                <img className=' rounded-lg ' src="/src/assets/banner.jpg" alt="" />
+                <img className=' rounded-lg ' src="https://i.ibb.co.com/brRspMK/banner.jpg" alt="" />
             </div>
             </div>
 
