@@ -4,12 +4,14 @@ import Footer from '../footer/Footer';
 import { getAllCart, getAllWish, removeCart, removeWish } from '../utilities';
 import CartCard from './CartCard';
 import WishList from './WishList';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const [product, setProduct] = useState([]);
     const [wishList, setWishList] = useState([])
     const [totalCost, setTotalCost] = useState([])
     const [activeTab, setActiveTab] = useState("Cart");
+    const navigate = useNavigate();
 
 
     const toggleTab = (tabName) => {
@@ -41,15 +43,18 @@ const Dashboard = () => {
 
     const calculateTotalCost = () => {
         return product.reduce((total, item) => total + item.price, 0);
-        // const total = product.reduce((total, item) => total + item.price, 0);
-        // setTotalCost(total);
-        // return total;
+      
     };
 
     const handlePurchase = () => {
-        setProduct([]);
-        localStorage.removeItem('cart');
         document.getElementById('my_modal_5').showModal();
+        // setProduct([]);
+        localStorage.removeItem('cart');
+    };
+
+    const handleModalClose = () => {
+        document.getElementById('my_modal_5').close();
+        navigate('/');
     };
 
     return (
@@ -112,9 +117,9 @@ const Dashboard = () => {
                     </div>
                     <h3 className="font-bold text-3xl">Payment Successfully!</h3>
                     <p className="py-4">Thanks for purchasing!</p>
-                    <p className='text-2xl font-bold'>Total: ${calculateTotalCost}</p>
+                    <p className='text-2xl font-bold'>Total: $ {calculateTotalCost()}</p>
                     <div className="">
-                        <button className="btn w-full" onClick={() => document.getElementById('my_modal_5').close()}>
+                        <button className="btn w-full" onClick={handleModalClose}>
                             Close
                         </button>
                     </div>

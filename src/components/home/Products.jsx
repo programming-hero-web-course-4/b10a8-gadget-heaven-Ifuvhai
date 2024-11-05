@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react';
 import Categories from './Categories';
 import ProductCards from './ProductCards';
 
-const Products = ({data}) => {
+const Products = ({ data }) => {
     const [allProduct, setAllProduct] = useState([]);
     const [productCategory, setProductCategory] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('/public/fake.json')
-        .then(res => res.json())
-        .then(data => {setAllProduct(data)
-            setProductCategory(data)
-        })
-    },[])
+            .then(res => res.json())
+            .then(data => {
+                setAllProduct(data)
+                setProductCategory(data)
+            })
+    }, [])
 
-    const handleCategory = (categoryName) =>{
+    const handleCategory = (categoryName) => {
         const categoryProduct = allProduct.filter(product => product.category === categoryName)
         setProductCategory(categoryProduct)
     };
@@ -23,7 +24,7 @@ const Products = ({data}) => {
     return (
         <div className='max-w-screen-lg mx-auto'>
             <h2 className='text-center text-3xl font-bold mb-10'>
-                show all products here
+                Explore Cutting-Edge Gadgets
             </h2>
 
             <div className='md:flex gap-4'>
@@ -43,14 +44,14 @@ const Products = ({data}) => {
                     }
                 </div> */}
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-    { (productCategory?.length || allProduct?.length) ? 
-        (productCategory || allProduct).map(product => (
-            <ProductCards product={product} key={product.product_id} />
-        )) :
-        <p>No products available.</p>
-    }
-</div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                    {(productCategory?.length || allProduct?.length) ?
+                        (productCategory || allProduct).map(product => (
+                            <ProductCards product={product} key={product.product_id} />
+                        )) :
+                        <p>No products available.</p>
+                    }
+                </div>
 
             </div>
         </div>

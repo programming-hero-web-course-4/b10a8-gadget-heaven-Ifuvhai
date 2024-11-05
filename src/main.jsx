@@ -8,12 +8,14 @@ import Dashboard from './components/dashboard/Dashboard.jsx';
 import Home from './components/home/Home.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
 import toast, { Toaster } from 'react-hot-toast';
+import ErrorPage from '../ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

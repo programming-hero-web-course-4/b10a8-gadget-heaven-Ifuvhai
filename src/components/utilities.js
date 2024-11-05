@@ -31,7 +31,7 @@ import toast from "react-hot-toast";
     cart.push(product)
     // console.log(cart)
     localStorage.setItem('cart', JSON.stringify(cart))
-    toast.success('Added Successfully!')
+    toast.success('Added cart Successfully!')
 }
  const addToWish = (product)=>{
     const wish = getAllWish();
@@ -42,20 +42,20 @@ import toast from "react-hot-toast";
     wish.push(product)
     // console.log(cart)
     localStorage.setItem('wish', JSON.stringify(wish))
-    toast.success('Added Successfully!')
+    toast.success('Added Wish List Successfully!')
 }
 
 const removeCart = (id)=>{
     const items = getAllCart();
     const remaining = items.filter(item=> item.product_id !== id)
     localStorage.setItem('cart', JSON.stringify(remaining))
-    toast.success('Remove Successfully!')
+    toast.success('Remove From Cart Successfully!')
 }
 const removeWish = (id)=>{
     const items = getAllWish();
     const remaining = items.filter(item=> item.product_id !== id)
     localStorage.setItem('wish', JSON.stringify(remaining))
-    toast.success('Remove Successfully!')
+    toast.success('Remove From Wish List Successfully!')
 }
 
 export {addToCart, getAllCart, removeCart, addToWish,getAllWish,removeWish}

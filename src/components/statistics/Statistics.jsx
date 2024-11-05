@@ -6,7 +6,7 @@ const Statistics = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <div className="hero bg-purple-700 text-white">
+            {/* <div className="hero bg-purple-700 text-white">
                 <div className="hero-content text-center pb-40">
                     <div className="max-w-md">
                         <h1 className="text-3xl font-bold">Product Details</h1>
@@ -41,9 +41,10 @@ const Statistics = () => {
                         <button className="btn btn-primary">Add To Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Footer></Footer>
         </div>
+       
     );
 };
 
